@@ -1,25 +1,25 @@
 
 
 
-                    <!-- Modal Start -->
-                    <div id="simpleModal" class="modal modal-overlay-card">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2 class="modal-title">Full Card</h2>
-                                <span class="closeBtn btn-close"></span>
-                            </div>
-                            <div class="modal-body">
-                                <form action="/studies/createStudy" method='POST'>
-                                    <input type="text" placeholder="<%= el.studyItem %>" name='studyItem'
-                                    class="w-100">
-                                    <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
-                                    placeholder="<%= el.textArea%>" maxlength="250"></textarea>
-                                    <!-- <input type="submit"> CHANGE TO PUT!!! currently will add a new entry -->
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Footer</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal End -->
+<!-- Modal Start -->
+<div id="simpleModal" class="modal modal-overlay-card">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Full Card Modal</h2>
+            <span class="closeBtn btn-close"></span>
+        </div>
+        <div class="modal-body">
+            <form action="/studies/createStudy" method='POST'>
+                <input type="text" placeholder="<%= el.studyItem %>" name='studyItem'
+                class="w-100">
+                <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
+                placeholder="<%= el.textArea%>" maxlength="250"></textarea>
+                <!-- <input type="submit"> CHANGE TO PUT!!! currently will add a new entry -->
+            </form>
+        </div>
+        <div class="modal-footer">
+            <h3>Footer</h3>
+        </div>
+    </div>
+</div>
+<!-- Modal End -->

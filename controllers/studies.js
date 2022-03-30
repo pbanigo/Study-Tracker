@@ -52,5 +52,14 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
-    }
+    },
+    editStudy: async (req, res) => {
+        let studyId = sessionStorage.getItem("StudyId")
+        try {
+            Study = await Study.findOneAndUpdate({_id:studyId})
+            console.log(studyId)
+        } catch (err) {
+            console.log(err)
+        }
+    },
 }    
