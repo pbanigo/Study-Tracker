@@ -9,7 +9,8 @@ module.exports = {
     user: req.user})
         }catch(err){
             console.log(err)
-    @@ -14,8 +14,8 @@ module.exports = {
+        }
+    },
     getProfile: async (req,res)=>{
         console.log(req.user)
         try{
@@ -19,4 +20,4 @@ module.exports = {
             console.log(err)
         }
     }
-}    
+}   
