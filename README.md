@@ -44,9 +44,7 @@ Start the project with
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-![Project Screen Shot](public/images/studypage.png?raw=true)
+<img src="public/images/study-buddy.gif" alt="Project Screen Shot" width="1000"/>
 
 ## Roadmap
 
@@ -62,7 +60,7 @@ See the [open issues](https://github.com/dyarawilliams/100devs-team-project/issu
 
 #Collaborators
 
-[dyarawiliams](https://github.com/dyarawiliams)
+[dyarawilliams](https://github.com/dyarawilliams)
 
 [pcabezal](https://github.com/pcabezal)
 
@@ -78,7 +76,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT
 
 ## How to Contribute
 
@@ -94,8 +92,6 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 ## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/dyarawilliams/100devs-team-project)
 
