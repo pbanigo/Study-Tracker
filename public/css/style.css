@@ -1,3 +1,8 @@
+body {
+  background: rgb(41, 39, 39);
+  text-decoration: rgb(231, 236, 239);
+}
+
 /* Landing Page */
 .mainSection {
     display: flex;
