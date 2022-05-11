@@ -11,18 +11,22 @@
                     <h4 class="text-right"><%= user.userName %> this would be your future edit profile page.</h4>
                     <span onclick="window.location.href='/logout';" class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>Logout</span>
                 </div>
+                <form method="POST" id="update_user">
                 <div class="row mt-2">
+                        <input type="hidden" name="id" value="<%= user._id %>">
                     <div class="col-md-12"><label class="labels">Email ID</label><input type="email" class="form-control" placeholder="enter email id" value="<%= user.email %>"></div>
                     <div class="col-md-12"><label class="labels">Username</label><input type="text" class="form-control" placeholder="username" value="<%= user.userName %>"></div>
-                    <div class="col-md-12"><label class="labels">Password</label><input type="password" class="form-control" placeholder="your password" value=""></div>
+                    <div class="col-md-12"><label class="labels">Password</label><input type="password" class="form-control" placeholder="your password" ></div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-12"><label class="labels">Display Name</label><input type="text" class="form-control" placeholder="your name" value=""></div>
+                    <div class="col-md-12"><label class="labels">Display Name</label><input type="text" class="form-control" placeholder="your name" value="<%= user.displayName %>"></div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-12"><label class="labels">What are you studying for?</label><input type="text" class="form-control" placeholder="what are you studying for" value=""></div>
+                    <div class="col-md-12"><label class="labels">What are you studying for?</label><input type="text" class="form-control" placeholder="what are you studying for" value="<%= user.studyFor %>"></div>
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save Profile</button>
+                </div>
+                </form>
             </div>
         </div>
     </div>
