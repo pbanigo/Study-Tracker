@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+=======
+<%- include('includes/_header') %>
+>>>>>>> Stashed changes
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
@@ -19,10 +21,15 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <!-- <form action="/login" method="POST">
+    <form action="/login" method="POST">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="submit">
+<<<<<<< Updated upstream
+    </form>
+</body>
+</html>
+=======
     </form> -->
 
     <section class="vh-100">
@@ -54,8 +61,6 @@
                   </div>
                   <a href="#!">Forgot password?</a>
                 </div>
-                <input type="submit">
-                Submit button
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
             </form>
 
@@ -71,6 +76,7 @@
                 <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
                   role="button">
                   <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+                  <a href="/signup">Register</a>
       
               </form>
             </div>
@@ -78,6 +84,5 @@
         </div>
       </section>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js" integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
-</html>
+<%- include('includes/_footer') %>
+>>>>>>> Stashed changes
