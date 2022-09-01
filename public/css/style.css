@@ -8,3 +8,6 @@ h1{
 .not{
     text-decoration: underline;
 }
+.mainSection {
+    height: 90vh !important;
+}

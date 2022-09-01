@@ -1,32 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<%- include('includes/_header') %>
     <h1>Todos</h1>
-    <ul>
+    <section class="notes-list">
     <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
+        <section class='todoItem' data-id='<%=el._id%>'>   
+            <div class='<%= el.completed === true ? 'completed' : 'not'%>'>
+                <h2><%= el.todoItem %></h2>
+                <p><%=el.textArea%></p>
+                <span class='del'> Delete </span> 
+            </div>   
+        </section>
+
+            <!-- <li class='todoItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span class='del'> Delete </span>
-            </li>
+            </li> -->
     <% }) %>    
-    </ul>
+</section>    
 
     <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
     <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <input type="text" placeholder="Title" name='todoItem'>
+        <textarea name="textArea" id="" cols="30" rows="10"></textarea>
         <input type="submit">
     </form>
 
     <a href="/logout">Logout</a>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+<%- include('includes/_footer') %>
