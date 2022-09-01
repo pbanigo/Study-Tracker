@@ -1,7 +1,11 @@
 const mongoose = require('mongoose')
 
 const TodoSchema = new mongoose.Schema({
-  todo: {
+  todoItem: {
+    type: String,
+    required: true,
+  },
+  textArea: {
     type: String,
     required: true,
   },
