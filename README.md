@@ -45,6 +45,7 @@ https://docs.google.com/document/d/18SvBvun_Esu58Oxr1TaCZFI8xmBIkHmmvUD3mGptnSk/
 
 # Next Group meeting
 
-Thursday, 1st September 2022. 1pm EST
+~~Thursday, 1st September 2022. 1pm EST~~
+Saturday, 3rd September 2022. 1pm EST
 
  Have fun testing and improving it! 😎
