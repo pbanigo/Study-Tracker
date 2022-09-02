@@ -1,21 +1,22 @@
 const deleteBtn = document.querySelectorAll('.del')
-const studyItem = document.querySelectorAll('span.not')
-const studyComplete = document.querySelectorAll('span.completed')
+const studyComplete = document.querySelectorAll('span.mark-complete')
+const studyIncomplete = document.querySelectorAll('span.mark-incomplete')
+
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteStudy)
 })
 
-Array.from(studyItem).forEach((el)=>{
+Array.from(studyComplete).forEach((el)=>{
     el.addEventListener('click', markComplete)
 })
 
-Array.from(studyComplete).forEach((el)=>{
+Array.from(studyIncomplete).forEach((el)=>{
     el.addEventListener('click', markIncomplete)
 })
 
 async function deleteStudy(){
-    const studyId = this.parentNode.dataset.id
+    const studyId = this.closest('section').dataset.id
     try{
         const response = await fetch('studies/deleteStudy', {
             method: 'delete',
@@ -33,7 +34,7 @@ async function deleteStudy(){
 }
 
 async function markComplete(){
-    const studyId = this.parentNode.dataset.id
+    const studyId = this.closest('section').dataset.id
     try{
         const response = await fetch('studies/markComplete', {
             method: 'put',
@@ -51,7 +52,7 @@ async function markComplete(){
 }
 
 async function markIncomplete(){
-    const studyId = this.parentNode.dataset.id
+    const studyId = this.closest('section').dataset.id
     try{
         const response = await fetch('studies/markIncomplete', {
             method: 'put',
