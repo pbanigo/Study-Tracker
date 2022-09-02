@@ -1,33 +1,43 @@
-   <%- include('partials/_header') %>
+<%- include('partials/_header') %>
     <h1>studies</h1>
-    <section class="notes-list">
-    <% studies.forEach( el => { %>
-        <section class='studyItem' data-id='<%=el._id%>'>   
-            <div class='<%= el.completed === true ? 'completed' : 'not'%>'>
-                <h2><%= el.studyItem %></h2>
-                <p><%=el.textArea%></p>
-                <span class='del'> Delete </span> 
-            </div>   
-        </section>
 
-            <!-- <li class='studyItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-            </li> -->
-    <% }) %>    
-</section>    
+    <section class="study-list">
+        <% studies.filter(el => el.completed === false).forEach( el => { %>
+            <section class='study-item' data-id='<%=el._id%>'>  
+                <div class='study-card not-completed'>
+                    <h2><%= el.studyItem %></h2>
+                    <p><%=el.textArea%></p>
+                    <span class='mark-complete'> Mark Complete </span><br> 
+                    <span class='del'> Delete </span>  
+                </div>   
+
+            </section>
+        <% }) %>   
+
+        <% studies.filter(el => el.completed === true).forEach( el => { %>
+            <section class='study-item' data-id='<%=el._id%>'>   
+
+                <div class='study-card completed'>
+                    <h2><%= el.studyItem %></h2>
+                    <p><%=el.textArea%></p>
+                    <span class='mark-incomplete'> Mark Incomplete </span><br> 
+                    <span class='del'> Delete </span> 
+                </div>   
+
+            </section>
+        <% }) %>   
+    </section>    
 
     <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
     <section class="px-5">
-    <form action="/studies/createStudy" method='POST'>
-        <input type="text" placeholder="Title" name='studyItem' class="w-100">
-        <textarea name="textArea" id="" cols="30" rows="10" class="w-100"></textarea>
-        <input type="submit">
-    </form>
+        <form action="/studies/createStudy" method='POST'>
+            <input type="text" placeholder="Title" name='studyItem' class="w-100">
+            <textarea name="textArea" id="" cols="30" rows="10" class="w-100"></textarea>
+            <input type="submit">
+        </form>
     </section>
     
-
     <a href="/logout">Logout</a>
 
-    <%- include('partials/_footer') %>
+<%- include('partials/_footer') %>

@@ -1,13 +1,5 @@
-h1{
-    color: red;
-}
-.completed{
-    text-decoration: line-through;
-    color: gray;
-}
-.not{
-    text-decoration: underline;
-}
+
+/* Landing Page */
 .mainSection {
     height: 90vh !important;
 }
@@ -53,3 +45,39 @@ h1{
     cursor: pointer;
     border: solid 1px #BA68C8
 }
+
+/* Studies
+Temporary for setup */
+.study-list {
+    width: 90vw;
+    border: 1px solid blue;
+    display: flex;
+ }
+  
+ .study-item {
+    border: 1px solid red;
+    height: 250px;
+    width: 250px;
+ }
+
+ .study-card {
+    margin: 10px;
+    border: 1px solid green;
+ }
+
+ .completed {
+    background-color: darkred;
+    color: gray;
+ }
+
+ .not-completed {
+    background-color: aquamarine;
+ }
+ 
+ .mark-complete, .mark-incomplete, .del {
+    cursor: pointer;
+ }
+ 
+
+
+
