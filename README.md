@@ -1,6 +1,6 @@
-# 100Devs Team Project
+# Study Buddy
 
-A simple App is built using the MVC Architecture, wer have also implemented "authorization" so folx can sign up, customize & personalize the app
+Study Buddy App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up
 
 ---
 
@@ -10,7 +10,7 @@ A simple App is built using the MVC Architecture, wer have also implemented "aut
 
 # Objectives
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+- It's an app to keep track of your study notes. The app is created to understand how MVC concept and logins are added
 
 ---
 
