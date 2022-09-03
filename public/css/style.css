@@ -1,6 +1,12 @@
 /* Landing Page */
 .mainSection {
-    height: 85.2vh !important;
+    display: flex;
+    flex-grow: 1;
+}
+
+.bodyFlex {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Profile Section CSS */
@@ -45,34 +51,8 @@
     border: solid 1px #ba68c8;
 }
 
-/* Studies
-Temporary for setup */
-/* .study-list {
-    width: 90vw;
-    border: 1px solid blue;
-    display: flex;
-}
+/* Studies */
 
-.study-item {
-    border: 1px solid red;
-    height: 250px;
-    width: 250px;
-}
-
-.study-card {
-    margin: 10px;
-    border: 1px solid green;
-} 
-
-.completed {
-    background-color: darkred;
-    color: gray;
-}
-
-.not-completed {
-    background-color: aquamarine;
-}
-*/
 .mark-complete,
 .mark-incomplete,
 .del {
@@ -123,3 +103,84 @@ Temporary for setup */
         max-width: 216px;
     }
 }
+
+/* input new note css temporary */
+/* .studies-container {
+    display: flex;
+} */
+
+.input-area {
+    padding-top: 2rem;
+}
+
+/* modal css */
+body{
+    font-family: fantasy;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  
+  .button{
+    background: #1ce;
+    padding: 2em 2em;
+    color: #fff;
+    border:  0;
+    border-radius: 3px;
+  }
+  
+  .button:hover{
+    background: #e439ef;
+    cursor: pointer;
+  }
+  
+  .modal-overlay{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  }
+  
+  .modal-header h2, .modal-footer h3{
+    margin: 0;
+  }
+  
+  .modal-header{
+    background: #1ce;
+    padding: 15px;
+    color: #fff;
+  }
+  
+  .modal-body{
+    padding: 10px 20px;
+  }
+  
+  .modal-footer{
+    background: #1ce;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .closeBtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+  }
+  
+  .closeBtn:hover,.closeBtn:focus{
+    color: #e439ef;
+    text-decoration: none;
+    cursor:  pointer;
+  }
