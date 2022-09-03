@@ -28,7 +28,7 @@
 
             <!-- Completed Notes Section  -->
             <h3>Completed Notes</h3>
-            <% studies.filter(el=> el.completed === true).forEach( el => { %>
+            <!-- <% studies.filter(el=> el.completed === true).forEach( el => { %>
                 <section class='study-item' data-id='<%=el._id%>'>
 
                     <div class='study-card completed'>
@@ -43,7 +43,30 @@
                     </div>
 
                 </section>
-            <% }) %>
+            <% }) %> -->
+
+            <div id="note-full-complete-container" class="note-has-grid row">
+                <% studies.filter(el=> el.completed === true).forEach( el => { %>
+                    <div class="col-md-4 single-note-item">
+                        <section class="card card-body" data-id='<%=el._id%>'>
+                            <span class="side-stick"></span>
+                            <h5 class="note-title w-75 mb-0">
+                                <%= el.studyItem %></i>
+                            </h5>
+                            <p class="note-date font-12"><span>Due Date:</span> 11 March 2009</p>
+                            <div class="note-content">
+                                <p class="note-inner-content">
+                                    <%= el.textArea%>
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-around">
+                                <span class='mark-incomplete'>Mark Incomplete </span>
+                                <span class="del"><i class="fa fa-trash remove-note"></i>Delete</span>
+                            </div>
+                        </section>
+                    </div>
+                <% }) %>
+            </div>
         </section>
 
         <h2>
