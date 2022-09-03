@@ -14,5 +14,6 @@ router.post('/signup', authController.postSignup)
 
 
 router.get('/manage', userController.getUser)
+router.get('/profile', userController.getProfile)
 
 module.exports = router

@@ -9,5 +9,14 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
+    },
+    getProfile: async (req,res)=>{
+        console.log(req.user)
+        try{
+            const todoItems = await Todo.find({userId:req.user.id})
+            res.render('view-profile', { title: 'View Profile', todos: todoItems, user: req.user})
+        }catch(err){
+            console.log(err)
+        }
     }
 }    
