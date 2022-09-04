@@ -4,7 +4,7 @@ let modal = document.getElementById('simpleModal');
 let modals = document.querySelectorAll('.modal-overlay-card')
 
 // target study cards to click open individual modals - this is also whats making it difficult to close modals :(
-let cardclicks = document.querySelectorAll('.card-clicker')
+let cardclicks = document.querySelectorAll('.study-open-button')
 // Get open modal button for add study card
 let modalBtn = document.getElementById('modalBtn');
 
@@ -28,14 +28,16 @@ function openModal(){
 // Open Modal on individual study cards
 function openModalCard(){    // oh my god it finally works
   console.log('open zee modal');
-    this.lastElementChild.children[4].style.display = 'block';
+  console.log(this);
+  this.nextElementSibling.style.display = 'block';
+    // this.lastElementChild.children[4].style.display = 'block';
 }
 
 
 // CLOSE MODALS //
 // Listen for outside click
 window.addEventListener('click', outsideClick);
-// window.addEventListener('click', outsideClickCard);
+window.addEventListener('click', outsideClickCard);
 
 // Listen for close click
 closeButtons.forEach(el => el.addEventListener('click', closeModal))
@@ -52,11 +54,9 @@ function outsideClick(e){
   }
 }
 
-//not working yet, not sure how to fix?
+// wow
 function outsideClickCard(e){
-
-    if(e.target == modals[0]){
-
-        modals[0].style.display = 'none';
-    }
+  for(let i = 0; i < modals.length; i++){
+      if(e.target == modals[i]) {modals[i].style.display = 'none';}
+  }
 }
