@@ -6,14 +6,14 @@ module.exports = {
         try{
             const studyItems = await Study.find({userId:req.user.id})
             const itemsLeft = await Study.countDocuments({userId:req.user.id,completed: false})
-            res.render('studies.ejs', {title: 'Your Progress', studies: studyItems, left: itemsLeft, user: req.user})
+            res.render('studies.ejs', {title: 'Your Progress', isAuth: req.isAuthenticated(), studies: studyItems, left: itemsLeft, user: req.user})
         }catch(err){
             console.log(err)
         }
     },
     createStudy: async (req, res)=>{
         try{
-            await Study.create({studyItem: req.body.studyItem, textArea: req.body.textArea, completed: false, userId: req.user.id})
+            await Study.create({studyItem: req.body.studyItem, textArea: req.body.textArea, dueDate: req.body.dueDate, completed: false, userId: req.user.id})
             console.log('Study item has been added!')
             res.redirect('/studies')
         }catch(err){

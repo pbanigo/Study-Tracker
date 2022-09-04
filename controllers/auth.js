@@ -7,7 +7,8 @@ const User = require('../models/User')
       return res.redirect('/studies')
     }
     res.render('login', {
-      title: 'Login'
+      title: 'Login', isAuth: req.isAuthenticated(),
+    user: req.user
     })
   }
   
@@ -52,7 +53,8 @@ const User = require('../models/User')
       return res.redirect('/studies')
     }
     res.render('signup', {
-      title: 'Create Account'
+      title: 'Create Account', isAuth: req.isAuthenticated(),
+    user: req.user
     })
   }
   

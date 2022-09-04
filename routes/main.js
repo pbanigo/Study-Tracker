@@ -13,7 +13,7 @@ router.get('/signup', authController.getSignup)
 router.post('/signup', authController.postSignup)
 
 
-router.get('/manage', userController.getUser)
-router.get('/profile', userController.getProfile)
+router.get('/manage', ensureAuth, userController.getUser)
+router.get('/profile', ensureAuth, userController.getProfile)
 
 module.exports = router
