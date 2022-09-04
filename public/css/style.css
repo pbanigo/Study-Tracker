@@ -133,7 +133,7 @@ body{
     cursor: pointer;
   }
   
-  .modal-overlay{
+  .modal-overlay, .modal-overlay-card{
     display: none;
     position: fixed;
     z-index: 1;
