@@ -5,6 +5,7 @@ const UserSchema = new mongoose.Schema({
   displayName: { type: String }, //to add a display name different from username
   image: { type: String }, //for the profile photo
   createdAt: { type: Date, default: Date.now }, // to show a join date
+  studyFor: { type: String}, // Shows what they are studying for
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
   password: String
