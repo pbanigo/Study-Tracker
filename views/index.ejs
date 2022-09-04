@@ -11,8 +11,13 @@
                         Sign up now to manage your assignments and all deadlines in one place.</br>
                         Costs 9.99/mth (monopoly money accepted).</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+
+                         <% if(!isAuth){%>
                             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/login">Sign In</a>
                             <a class="btn btn-outline-light btn-lg px-4" href="/signup">Register</a>
+                        <%}else{%>
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/studies">Dashboard</a>
+                        <%};%>
                         </div>
                     </div>
                 </div>
