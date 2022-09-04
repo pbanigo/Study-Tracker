@@ -1,38 +1,40 @@
 <%- include('partials/_header') %>
 
-    <% function truncator(str, len) { if (str.length> len && str.length > 0) {
-        let new_str = str + ' '
-        new_str = str.substr(0, len)
-        new_str = str.substr(0, new_str.lastIndexOf(' '))
-        new_str = new_str.length > 0 ? new_str : str.substr(0, len)
-        return new_str + '...'
-        }
-        return str
-        }
-    %>
-        
-        <section class="studies-container">
-            <div class="container pt-2 d-flex justify-content-between">
-                <h2>
-                    <%= user.userName %> has <%= left %> things left to study.
-                </h2>
-                <button id="modalBtn" class="modal-test button rounded-pill"><i class="fa fa-plus"></i>Add Note</button>
+<% function truncator(str, len) { if (str.length> len && str.length > 0) {
+let new_str = str + ' '
+new_str = str.substr(0, len)
+new_str = str.substr(0, new_str.lastIndexOf(' '))
+new_str = new_str.length > 0 ? new_str : str.substr(0, len)
+return new_str + '...'
+}
+return str
+}
+%>
+
+<section class="studies-container">
+    <div class="container pt-2 d-flex justify-content-between">
+        <h2>
+            <%= user.userName %> has <%= left %> things left to study.
+        </h2>
+        <button id="modalBtn" class="modal-test button rounded-pill"><i class="fa fa-plus"></i>Add Note</button>
+    </div>
+    <!-- Modal  -->
+    <div id="simpleModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="text-center">Add a Study Note</h2>
+                <span class="closeBtn"><i class="fa fa-times"></i></span>
             </div>
-            <!-- Modal  -->
-            <div id="simpleModal" class="modal-overlay">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="text-center">Add a Study Note</h2>
-                        <span class="closeBtn"><i class="fa fa-times"></i></span>
-                    </div>
-                    <div class="modal-body">
-                        <form action="/studies/createStudy" method='POST'>
-                            <input type="text" placeholder="Title" name='studyItem' class="w-100">
-                            <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
-                                placeholder="Brief notes about study plan" maxlength="250"></textarea>
-                            <input type="submit">
-                        </form>
-                    </div>
+            <div class="modal-body">
+                <form action="/studies/createStudy" method='POST'>
+                    <input type="text" placeholder="Title" name='studyItem' class="w-100">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" name="dueDate">
+                    <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
+                    placeholder="Brief notes about study plan" maxlength="250"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
                     <!-- <div class="modal-footer">
                         <h3>Footer</h3>
                     </div> -->
@@ -44,50 +46,50 @@
 
                 <div id="note-full-container" class="note-has-grid row">
                     <% studies.filter(el=> el.completed === false).forEach( el => { %>
-                        <div class="col-md-4 single-note-item card-clicker">
-                            <section class="card card-body" data-id='<%=el._id%>'>
-                                <span class="side-stick"></span>
-                                <h5 class="note-title w-75 mb-0">
-                                    <%= el.studyItem %></i>
-                                </h5>
-                                <p class="note-date font-12"><span>Due Date:</span> 11 March 2009</p>
-                                <div class="note-content">
-                                    <p class="note-inner-content">
-                                        <%= truncator(el.textArea, 200) %>
-                                    </p>
-                                </div>
+                    <div class="col-md-4 single-note-item card-clicker">
+                        <section class="card card-body" data-id='<%=el._id%>'>
+                            <span class="side-stick"></span>
+                            <h5 class="note-title w-75 mb-0">
+                                <%= el.studyItem %></i>
+                            </h5>
+                            <p class="note-date font-12"><span>Due Date:</span><%= el.dueDate %></p>
+                            <div class="note-content">
+                                <p class="note-inner-content">
+                                    <%= truncator(el.textArea, 200) %>
+                                </p>
+                            </div>
 
-                                <!-- Modal Start -->
-                                <div id="simpleModal" class="modal-overlay-card">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <span class="closeBtn"> ♥</span>
-                                            <h2>Full Card</h2>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="/studies/createStudy" method='POST'>
-                                                <input type="text" placeholder="<%= el.studyItem %>" name='studyItem'
-                                                    class="w-100">
-                                                <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
-                                                    placeholder="<%= el.textArea%>" maxlength="250"></textarea>
-                                                <!-- <input type="submit"> CHANGE TO PUT!!! currently will add a new entry -->
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <h3>Footer</h3>
-                                        </div>
+                            <!-- Modal Start -->
+                            <div id="simpleModal" class="modal-overlay-card">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="closeBtn"> ♥</span>
+                                        <h2>Full Card</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="/studies/createStudy" method='POST'>
+                                            <input type="text" placeholder="<%= el.studyItem %>" name='studyItem'
+                                            class="w-100">
+                                            <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
+                                            placeholder="<%= el.textArea%>" maxlength="250"></textarea>
+                                            <!-- <input type="submit"> CHANGE TO PUT!!! currently will add a new entry -->
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h3>Footer</h3>
                                     </div>
                                 </div>
-                                <!-- Modal End -->
+                            </div>
+                            <!-- Modal End -->
 
-                                <div class="d-flex align-items-center justify-content-around">
-                                    <span class='mark-complete'><i class="fa fa-check-square-o"></i>Mark Complete
-                                    </span>
-                                    <span class="del"><i class="fa fa-trash remove-note"></i>Delete</span>
-                                </div>
-                            </section>
-                        </div>
-                        <% }) %>
+                            <div class="d-flex align-items-center justify-content-around">
+                                <span class='mark-complete'><i class="fa fa-check-square-o"></i>Mark Complete
+                                </span>
+                                <span class="del"><i class="fa fa-trash remove-note"></i>Delete</span>
+                            </div>
+                        </section>
+                    </div>
+                    <% }) %>
                 </div>
 
                 <!-- Completed Studies Section  -->
@@ -95,49 +97,49 @@
 
                 <div id="note-full-complete-container" class="note-has-grid row">
                     <% studies.filter(el=> el.completed === true).forEach( el => { %>
-                        <div class="col-md-4 single-note-item card-clicker">
-                            <section class="card card-body" data-id='<%=el._id%>'>
-                                <span class="side-stick"></span>
-                                <h5 class="note-title w-75 mb-0">
-                                    <%= el.studyItem %></i>
-                                </h5>
-                                <p class="note-date font-12"><span>Due Date:</span> 11 March 2009</p>
-                                <div class="note-content">
-                                    <p class="note-inner-content">
-                                        <%= el.textArea%>
-                                    </p>
-                                </div>
+                    <div class="col-md-4 single-note-item card-clicker">
+                        <section class="card card-body" data-id='<%=el._id%>'>
+                            <span class="side-stick"></span>
+                            <h5 class="note-title w-75 mb-0">
+                                <%= el.studyItem %></i>
+                            </h5>
+                            <p class="note-date font-12"><span>Due Date:</span> 11 March 2009</p>
+                            <div class="note-content">
+                                <p class="note-inner-content">
+                                    <%= el.textArea%>
+                                </p>
+                            </div>
 
-                                <!-- Modal Start-->
-                                <div id="simpleModal" class="modal-overlay-card">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <span class="closeBtn"> ♥</span>
-                                            <h2>Full Card</h2>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="/studies/createStudy" method='POST'>
-                                                <input type="text" placeholder="<%= el.studyItem %>" name='studyItem'
-                                                    class="w-100">
-                                                <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
-                                                    placeholder="<%= el.textArea%>" maxlength="250"></textarea>
-                                                <!-- <input type="submit"> CHANGE TO PUT!!! currently will add a new entry -->
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <h3>Footer</h3>
-                                        </div>
+                            <!-- Modal Start-->
+                            <div id="simpleModal" class="modal-overlay-card">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="closeBtn"> ♥</span>
+                                        <h2>Full Card</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="/studies/createStudy" method='POST'>
+                                            <input type="text" placeholder="<%= el.studyItem %>" name='studyItem'
+                                            class="w-100">
+                                            <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
+                                            placeholder="<%= el.textArea%>" maxlength="250"></textarea>
+                                            <!-- <input type="submit"> CHANGE TO PUT!!! currently will add a new entry -->
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h3>Footer</h3>
                                     </div>
                                 </div>
-                                <!-- Modal End -->
+                            </div>
+                            <!-- Modal End -->
 
-                                <div class="d-flex align-items-center justify-content-around">
-                                    <span class='mark-incomplete'><i class="fa fa-minus-square-o"></i>Mark Incomplete
-                                    </span>
-                                    <span class="del"><i class="fa fa-trash remove-note"></i>Delete</span>
-                                </div>
-                            </section>
-                        </div>
+                            <div class="d-flex align-items-center justify-content-around">
+                                <span class='mark-incomplete'><i class="fa fa-minus-square-o"></i>Mark Incomplete
+                                </span>
+                                <span class="del"><i class="fa fa-trash remove-note"></i>Delete</span>
+                            </div>
+                        </section>
+                    </div>
                     <% }) %>
                 </div>
             </div>

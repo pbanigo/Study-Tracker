@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
 const StudySchema = new mongoose.Schema({
+  dueDate: {
+    type: Date
+  },
   studyItem: {
     type: String,
     required: true,
