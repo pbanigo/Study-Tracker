@@ -114,26 +114,25 @@
 }
 
 /* modal css */
-body{
+/* body{
     font-family: fantasy;
     font-size: 20px;
     line-height: 1.6;
-  }
+  } */
   
   .button{
-    background: #1ce;
-    padding: 2em 2em;
+    /* background: #1ce; */
+    background-color: var(--bs-blue);
     color: #fff;
     border:  0;
-    border-radius: 3px;
+    border-radius: 50%;
   }
   
   .button:hover{
-    background: #e439ef;
     cursor: pointer;
   }
   
-  .modal-overlay{
+  .modal-overlay, .modal-overlay-card{
     display: none;
     position: fixed;
     z-index: 1;
@@ -148,6 +147,8 @@ body{
   .modal-content{
     background-color: #f4f4f4;
     margin: 20% auto;
+    padding-left: 20%;
+    padding-right: 20%;
     width: 70%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
   }
@@ -157,7 +158,7 @@ body{
   }
   
   .modal-header{
-    background: #1ce;
+    background: var(--bs-blue);
     padding: 15px;
     color: #fff;
   }
