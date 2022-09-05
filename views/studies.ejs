@@ -19,11 +19,11 @@ return str
         <button id="modalBtn" class="modal-test button rounded-pill"><i class="fa fa-plus"></i>Add Note</button>
     </div>
     <!-- Modal  -->
-    <div id="simpleModal" class="modal-overlay">
+    <div id="simpleModal" class="modal modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="text-center">Add a Study Note</h2>
-                <span class="closeBtn"><i class="fa fa-times"></i></span>
+                <h2 class="modal-title">Add a Study Note</h2>
+                <span class="closeBtn btn-close"></span>
             </div>
             <div class="modal-body">
                 <form action="/studies/createStudy" method='POST'>
@@ -61,11 +61,11 @@ return str
                             </div>
 
                             <!-- Modal Start -->
-                            <div id="simpleModal" class="modal-overlay-card">
+                            <div id="simpleModal" class="modal modal-overlay-card">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <span class="closeBtn"> ♥</span>
-                                        <h2>Full Card</h2>
+                                        <h2 class="modal-title">Full Card</h2>
+                                        <span class="closeBtn btn-close"></span>
                                     </div>
                                     <div class="modal-body">
                                         <form action="/studies/createStudy" method='POST'>
