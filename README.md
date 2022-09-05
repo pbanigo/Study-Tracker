@@ -63,39 +63,40 @@ Tuesday, 6th September 2022. 1pm EST
 <img src="https://img.shields.io/github/license/dyarawilliams/100devs-team-project?style=for-the-badge">
 </p>
 
-# Your-Project-Title
+# Study Buddy
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+Study Buddy App is built using MVC Architecture.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+It is a lot keeping track of assignments, deadlines and completion dates and as such, we decided to build the Study Buddy Web App.
+It lets you see all your assignments and deadlines in a single place.
+
 
 ## Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This app was built using: 
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
+* [EJS](https://ejs.org/)
 * [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Express Js](https://expressjs.org)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Install all the dependencies or node packages used for development via Terminal
+
+`npm install` 
+
+Start the project with
+
+`npm start` 
+
 
 ## Usage
 
 Provide instructions and examples for use. Include screenshots as needed.
 
-![Project Screen Shot](https://github.com/rahulkarda/readme-template/blob/master/images/example.png?raw=true)
+![Project Screen Shot](public/images/studypage.png?raw=true)
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
@@ -113,23 +114,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     - [ ] Chinese
     - [ ] Spanish
 
-See the [open issues](https://github.com/rahulkarda/readme-template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/dyarawilliams/100devs-team-project/issues) for a full list of proposed features (and known issues).
 
-## Features
-
-If your project has a lot of features, list them here.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
 
 ## Credits
 
