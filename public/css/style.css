@@ -126,6 +126,7 @@
     color: #fff;
     border:  0;
     border-radius: 50%;
+    padding: 1%;
   }
   
   .button:hover{
