@@ -42,6 +42,7 @@ return str
             </div>
 
             <div class="container pt-3">
+                <% if(left>0){%>
                 <h3>Studies in Progress</h3>
 
                 <div id="note-full-container" class="note-has-grid row">
@@ -92,6 +93,8 @@ return str
                     </div>
                     <% }) %>
                 </div>
+                 <%};%>
+                <% if(finished>0){%>
 
                 <!-- Completed Studies Section  -->
                 <h3>Completed Studies</h3>
@@ -147,6 +150,8 @@ return str
                     </div>
                     <% }) %>
                 </div>
+
+                <%};%>
             </div>
         </section>
 
