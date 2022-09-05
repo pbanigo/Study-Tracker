@@ -55,12 +55,12 @@ Tuesday, 6th September 2022. 1pm EST
 
 
  <p align="center">
-<img src="https://img.shields.io/github/contributors/rahulkarda/readme-template?color=blue&style=for-the-badge">
-<img src="https://img.shields.io/github/forks/rahulkarda/readme-template?color=lgreen&style=for-the-badge">
-<img src="https://img.shields.io/github/stars/rahulkarda/readme-template?color=yellow&style=for-the-badge">
-<img src="https://img.shields.io/github/issues/rahulkarda/readme-template?color=red&style=for-the-badge">
-<img src="https://img.shields.io/github/issues-pr/rahulkarda/readme-template?color=darkorange&label=Pull%20Requests&style=for-the-badge">
-<img src="https://img.shields.io/github/license/rahulkarda/readme-template?style=for-the-badge">
+<img src="https://img.shields.io/github/contributors/dyarawilliams/100devs-team-project?color=blue&style=for-the-badge">
+<img src="https://img.shields.io/github/forks/dyarawilliams/100devs-team-project?color=lgreen&style=for-the-badge">
+<img src="https://img.shields.io/github/stars/dyarawilliams/100devs-team-project?color=yellow&style=for-the-badge">
+<img src="https://img.shields.io/github/issues/dyarawilliams/100devs-team-projectcolor=red&style=for-the-badge">
+<img src="https://img.shields.io/github/issues-pr/dyarawilliams/100devs-team-project?color=darkorange&label=Pull%20Requests&style=for-the-badge">
+<img src="https://img.shields.io/github/license/dyarawilliams/100devs-team-project?style=for-the-badge">
 </p>
 
 # Your-Project-Title
