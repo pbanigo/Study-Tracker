@@ -183,3 +183,8 @@
     text-decoration: none;
     cursor:  pointer;
   }
+
+  .study-open-button{
+    position: absolute;
+    right: 13px;
+  }

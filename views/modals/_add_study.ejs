@@ -1,0 +1,20 @@
+
+    <!-- Modal  -->
+    <div id="simpleModal" class="modal modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add a Study Note</h2>
+                <span class="closeBtn btn-close"></span>
+            </div>
+            <div class="modal-body">
+                <form action="/studies/createStudy" method='POST'>
+                    <input type="text" placeholder="Title" name='studyItem' class="w-100">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" name="dueDate">
+                    <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
+                    placeholder="Brief notes about study plan" maxlength="250"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
