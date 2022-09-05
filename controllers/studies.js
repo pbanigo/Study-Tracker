@@ -6,7 +6,8 @@ module.exports = {
         try{
             const studyItems = await Study.find({userId:req.user.id})
             const itemsLeft = await Study.countDocuments({userId:req.user.id,completed: false})
-            res.render('studies.ejs', {title: 'Your Progress', isAuth: req.isAuthenticated(), studies: studyItems, left: itemsLeft, user: req.user})
+            const itemsCompleted = await Study.countDocuments({userId:req.user.id,completed: true})
+            res.render('studies.ejs', {title: 'Your Progress', isAuth: req.isAuthenticated(), studies: studyItems, left: itemsLeft, finished: itemsCompleted, user: req.user})
         }catch(err){
             console.log(err)
         }
