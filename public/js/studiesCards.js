@@ -60,3 +60,10 @@ function outsideClickCard(e){
       if(e.target == modals[i]) {modals[i].style.display = 'none';}
   }
 }
+
+
+
+function formUpdate() {
+  let formValue = document.querySelector('#modal-input-title').value;
+  console.log(formValue);
+}

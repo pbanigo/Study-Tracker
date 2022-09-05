@@ -1,3 +1,8 @@
+body {
+  background: rgb(41, 39, 39);
+  text-decoration: rgb(231, 236, 239);
+}
+
 /* Landing Page */
 .mainSection {
     display: flex;
@@ -127,6 +132,17 @@
     border:  0;
     border-radius: 50%;
     padding: 1%;
+    width: 9rem;
+    height: 4rem;
+  }
+
+  .add-note-text {
+    text-shadow: 1.5px 1.5px black;
+  }
+
+  .modal-test {
+    font-size: 1.2rem !important;
+    font-weight: 900;
   }
   
   .button:hover{
