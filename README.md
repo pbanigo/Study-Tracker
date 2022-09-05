@@ -50,13 +50,10 @@ Provide instructions and examples for use. Include screenshots as needed.
 
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [ ] Add Changelog
+- [ ] Add back to top links
+- [ ] Add Study Group function
+- [ ] Add notifications
 
 See the [open issues](https://github.com/dyarawilliams/100devs-team-project/issues) for a full list of proposed features (and known issues).
 
@@ -78,15 +75,12 @@ See the [open issues](https://github.com/dyarawilliams/100devs-team-project/issu
 
 bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
 
-If you followed tutorials, include links to those here as well.
 
 ## License
 
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
 ## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -103,7 +97,7 @@ Don't forget to give the project a star! Thanks again!
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/dyarawilliams/100devs-team-project)
 
 ## Acknowledgments
 
