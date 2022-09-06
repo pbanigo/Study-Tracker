@@ -1,6 +1,7 @@
 const deleteBtn = document.querySelectorAll('.del')
 const studyComplete = document.querySelectorAll('span.mark-complete')
 const studyIncomplete = document.querySelectorAll('span.mark-incomplete')
+const editStudyBtn = document.querySelectorAll('.editBtn')
 
 
 Array.from(deleteBtn).forEach((el)=>{
@@ -14,6 +15,15 @@ Array.from(studyComplete).forEach((el)=>{
 Array.from(studyIncomplete).forEach((el)=>{
     el.addEventListener('click', markIncomplete)
 })
+
+Array.from(editStudyBtn).forEach((el)=>{
+    el.addEventListener('click', editStudy)
+})
+
+function editStudy(){
+    console.log('saved')
+    sessionStorage.setItem("StudyId", this.closest('section').dataset.id)
+}
 
 async function deleteStudy(){
     console.log('delete log',this.closest('section').dataset.id);

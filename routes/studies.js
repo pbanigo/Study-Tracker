@@ -11,6 +11,8 @@ router.put('/markComplete', studiesController.markComplete)
 
 router.put('/markIncomplete', studiesController.markIncomplete)
 
+router.put('/editStudy', studiesController.editStudy)
+
 router.delete('/deleteStudy', studiesController.deleteStudy)
 
 module.exports = router
