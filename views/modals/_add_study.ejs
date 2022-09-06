@@ -8,11 +8,11 @@
             </div>
             <div class="modal-body">
                 <form action="/studies/createStudy" method='POST'>
-                    <input type="text" placeholder="Title" name='studyItem' class="w-100">
-                    <label for="dueDate">Due Date</label>
-                    <input type="date" id="dueDate" name="dueDate">
-                    <textarea name="textArea" id="" cols="30" rows="10" class="w-100"
-                    placeholder="Brief notes about study plan" maxlength="250"></textarea>
+                    <div class="add-note-input"> <input type="text" placeholder="Title" name='studyItem' class="w-100" maxlength="30"></div>
+                    <div class="add-note-input"> Due Date: <input type="date" id="dueDate" name="dueDate"></div>
+
+                    <div class="add-note-input"><textarea name="textArea" id="" cols="30" rows="10" class="w-100"
+                    placeholder="Notes about study plan"></textarea></div>
                     <input type="submit">
                 </form>
             </div>
