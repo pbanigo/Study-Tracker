@@ -45,9 +45,7 @@ Start the project with
 ## Usage
 
 Provide instructions and examples for use. Include screenshots as needed.
-
-![Project Screen Shot](public/images/study-buddy.gif)
-
+<img src="public/images/study-buddy.gif" alt="Project Screen Shot" width="1000"/>
 ## Roadmap
 
 - [ ] Add Changelog
