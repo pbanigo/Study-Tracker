@@ -46,7 +46,7 @@ Start the project with
 
 Provide instructions and examples for use. Include screenshots as needed.
 
-![Project Screen Shot](public/images/studypage.png?raw=true)
+![Project Screen Shot](public/images/study-buddy.gif)
 
 ## Roadmap
 
