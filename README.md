@@ -62,7 +62,7 @@ See the [open issues](https://github.com/dyarawilliams/100devs-team-project/issu
 
 #Collaborators
 
-[dyarawiliams](https://github.com/dyarawiliams)
+[dyarawilliams](https://github.com/dyarawilliams)
 
 [pcabezal](https://github.com/pcabezal)
 
